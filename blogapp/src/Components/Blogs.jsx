@@ -2,8 +2,8 @@ import React, {useEffect, useState} from 'react';
 import  {Card,Button} from 'react-bootstrap';
 import axios from 'axios';
 
-function Blogs() {
-
+function Blogs(props) {
+    console.log(props);
     const [blogs, setBlogs] = useState([]);
     
     useEffect(() => {
@@ -12,10 +12,10 @@ function Blogs() {
                const headers = {
                    "Access=Control-Allow-Origin": "*"
                }
-            const res = await axios.get('https://harshit977blog.herokuapp.com/api/blogs');
+            const res = await axios.get('https://harshit977blog.herokuapp.com/api/blogs',headers);
             console.log(res.data);
             if(res.data) {
-                setBlogs(res.data);
+                setBlogs(res.data.slice(0,props.count));
             } 
         }
         catch(error) {
