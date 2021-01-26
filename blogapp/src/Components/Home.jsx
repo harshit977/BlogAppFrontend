@@ -2,6 +2,7 @@ import React from 'react';
 import {Container,Row,Col} from 'react-bootstrap';
 
 import Blogs from './Blogs';
+import CreateBlog from './CreateBlog';
 
 
 function Home ()  {
@@ -11,9 +12,9 @@ function Home ()  {
             <Row>
                <Col lg="8">
                   <Blogs />
-               </Col>
+               </Col>   
                <Col >
-               
+                  <CreateBlog />
                </Col>
             </Row>
          </Container>

@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import  {Card} from 'react-bootstrap';
+import  {Card,Button} from 'react-bootstrap';
 import axios from 'axios';
 
 function Blogs() {
@@ -12,7 +12,7 @@ function Blogs() {
                const headers = {
                    "Access=Control-Allow-Origin": "*"
                }
-            const res = await axios.get('https://mostlypandatuts.herokuapp.com/api/blogs');
+            const res = await axios.get('https://harshit977blog.herokuapp.com/api/blogs');
             console.log(res.data);
             if(res.data) {
                 setBlogs(res.data);
@@ -31,14 +31,15 @@ function Blogs() {
                <>
                   {blogs.map((blog)=> (
                       <div style={{margin: 20}} >
-                      <Card style={{ width: 600 }}>
-                          <Card.Body>
-                              <Card.Title>{blog.title}</Card.Title>
-                              <Card.Subtitle className="mb-2 text-muted">{blog.author}</Card.Subtitle>
-                              <Card.Text>
-                                {blog.desc}
-                              </Card.Text>
-                              </Card.Body>
+                      <Card border="secondary">
+                        <Card.Header as="h5">{blog.title}</Card.Header>
+                        <Card.Body>
+                            <Card.Title className="blockquote-footer">{blog.author}</Card.Title>
+                            <Card.Text>
+                             {blog.desc}
+                            </Card.Text>
+                            <Button variant="primary">Read</Button>
+                        </Card.Body>
                       </Card>
                       </div>
                   ))
