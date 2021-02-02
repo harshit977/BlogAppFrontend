@@ -1,4 +1,3 @@
-import react from 'react';
 import Blogs from './Blogs';
 
 function AllBlogs() {

@@ -11,7 +11,7 @@ function Home ()  {
          <Container>
             <Row>
                <Col lg="8">
-                  <Blogs count={2} />
+                  <Blogs count={4} />
                </Col>   
                <Col >
                   <CreateBlog />

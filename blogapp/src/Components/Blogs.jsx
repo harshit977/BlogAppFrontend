@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import  {Card,Button} from 'react-bootstrap';
 import axios from 'axios';
+import dayjs from 'dayjs';
+import relativeTime from 'dayjs/plugin/relativeTime';
 
 function Blogs(props) {
     console.log(props);
@@ -24,13 +26,13 @@ function Blogs(props) {
        }
        dataFetch();
     },[])
-
+    dayjs.extend(relativeTime);
    return(
        <div>
            { blogs ? (
                <>
-                  {blogs.map((blog)=> (
-                      <div style={{margin: 20}} >
+                  {blogs.map((blog,id)=> (
+                      <div key={id} style={{margin: 20}} >
                       <Card border="secondary">
                         <Card.Header as="h5">{blog.title}</Card.Header>
                         <Card.Body>
@@ -40,6 +42,7 @@ function Blogs(props) {
                             </Card.Text>
                             <Button variant="primary">Read</Button>
                         </Card.Body>
+                        <Card.Footer className="text-muted">Last updated {dayjs(`${blog.updatedAt}`).fromNow()}</Card.Footer>
                       </Card>
                       </div>
                   ))
