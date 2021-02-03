@@ -3,6 +3,7 @@ import  {Card,Button,Row,Col} from 'react-bootstrap';
 import axios from 'axios';
 import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
+import {Link} from 'react-router-dom';
 
 function Blogs(props) {
     console.log(props);
@@ -42,7 +43,7 @@ function Blogs(props) {
                             <Card.Text>
                               {blog.desc.substring(0,200)+"..."}
                             </Card.Text>
-                            <Button variant="primary">Read</Button>
+                            <Link to={{pathname:'/fullblog/'+blog._id}}><Button variant="primary">Explore More</Button></Link>
                         </Card.Body>
                         <Card.Footer className="text-muted">Last updated {dayjs(`${blog.updatedAt}`).fromNow()}</Card.Footer>
                       </Card>
