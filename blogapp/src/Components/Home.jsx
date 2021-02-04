@@ -1,11 +1,14 @@
 import React from 'react';
 import {Container,Row,Col} from 'react-bootstrap';
-
 import Blogs from './Blogs';
 import CreateBlog from './CreateBlog';
 
 
+
+
 function Home ()  {
+   
+   
     return(
        <div>
          <Container>

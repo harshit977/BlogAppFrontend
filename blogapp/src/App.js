@@ -4,10 +4,11 @@ import NavBar from './Components/Navbar';
 import Home from './Components/Home';
 import AllBlogs from './Components/AllBlogs';
 import FullBlog from './Components/FullBlog';
-import UpdateBlog from './Components/UpdateBlog';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+
 function App() {
+
   return (
     <div className="App">
       <BrowserRouter>
@@ -15,7 +16,6 @@ function App() {
         <Switch>
            <Route path="/allblogs" component={AllBlogs} />
            <Route path='/fullblog/:id' component={FullBlog} />
-           <Route path='/updateblog/:id' component={UpdateBlog} />
            <Route path="/" component={Home} />
         </Switch>
       </BrowserRouter>
