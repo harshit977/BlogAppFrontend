@@ -35,7 +35,7 @@ function Blogs(props) {
    return(
     <>
     {loading === false ? (
-        <div>
+        <div >
         <Row lg={2}>
         { blogs ? (
             <>
