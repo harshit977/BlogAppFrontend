@@ -80,7 +80,7 @@ function UpdateBlog (props)  {
             Blog Details 
           </Modal.Title>
         <Modal.Body className="show-grid">
-                <div style={{margin: 10}}>
+                <div style={{margin: 20}}>
                     <Form  className="form" style={{textAlign:'center'} } height="800" width="400">
                     <Form.Group controlId="">
                         <Form.Control className="input" type="text" value={blogPost.title} onChange={handleChange} placeholder="" 

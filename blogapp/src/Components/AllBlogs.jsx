@@ -3,7 +3,7 @@ import Blogs from './Blogs';
 function AllBlogs() {
     return(
         <>
-        <Blogs count={1000}/>
+        <Blogs count={100000}/>
         </>
     )
 }

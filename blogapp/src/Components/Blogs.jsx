@@ -35,23 +35,26 @@ function Blogs(props) {
    return(
     <>
     {loading === false ? (
-        <div >
+        
+        <div style={{fontFamily:'cursive',color:'black'}} >
+            <div>
+        </div>
         <Row lg={2}>
         { blogs ? (
             <>
                {blogs.map((blog,id)=> (
                    <Col>
                    <div key={id} style={{margin: 20}} >
-                   <Card border="secondary" style={{backgroundColor:'Eton Blue'}}>
-                     <Card.Header as="h5">{blog.title}</Card.Header>
-                     <Card.Body>
-                         <Card.Title className="blockquote-footer">{blog.author}</Card.Title>
+                   <Card style={{backgroundColor:'whitesmoke', borderBlockColor:'white' , borderBlockStyle:'groove',borderWidth:3}}>
+                     <Card.Header style={{backgroundColor:'skyblue',color:'white'}} as="h5">{blog.title}</Card.Header>
+                     <Card.Body style={{backgroundColor:'lightyellow'}}>
+                         <Card.Title style={{color:'crimson',fontWeight:'bold'}} className="blockquote-footer">{blog.author}</Card.Title>
                          <Card.Text>
                            {blog.desc.substring(0,200)+"..."}
                          </Card.Text>
                          <Link to={{pathname:'/fullblog/'+blog._id}}><Button variant="primary">Explore More</Button></Link>
                      </Card.Body>
-                     <Card.Footer className="text-muted">Last updated {dayjs(`${blog.updatedAt}`).fromNow()}</Card.Footer>
+                     <Card.Footer style={{backgroundColor:'skyblue'}} className="text-muted">Last updated {dayjs(`${blog.updatedAt}`).fromNow()}</Card.Footer>
                    </Card>
                    </div>
                    </Col>

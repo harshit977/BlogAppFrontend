@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 
 function Footer(){
     return(
-        <div className="footer" style={{backgroundColor:"Menu"}}>
+        <div className="footer" style={{backgroundColor:"skyblue"}}>
         <div className="container" style={{padding:10}}>
             <div className="row justify-content-center">             
                 <div className="col-4 offset-1 col-sm-2">
@@ -15,7 +15,7 @@ function Footer(){
                         <li><Link to="/">Contact Us</Link></li>
                     </ul>
                 </div>
-                <div className="col-7 col-sm-5">
+                <div className="col-7 col-sm-5 ">
                     <h5>Reach Us</h5>
 		              <i className="fa fa-phone fa-lg" style={{padding:10}}></i>: +91-9823679125<br />
 		              <i className="fa fa-fax fa-lg" style={{padding:10}}></i>: +911-22752186<br />

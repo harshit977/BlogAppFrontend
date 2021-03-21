@@ -10,7 +10,7 @@ import { Nav } from 'react-bootstrap';
 
 function NavBar() {
     return (
-        <Navbar bg="light" expand="lg">
+        <Navbar style={{backgroundColor:'skyblue'}}  expand="lg">
         <Navbar.Brand href="#home" style={{fontSize:20,fontFamily:'sans-serif'}} >Blog App</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" >
